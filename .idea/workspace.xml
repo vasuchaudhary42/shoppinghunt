@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4f508d5-384f-4362-aca4-b52544eb777e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/authentication/anonymous.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/authentication/anonymous.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/authentication/auth-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/authentication/auth-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/authentication/auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/authentication/auth.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/src/app/authentication/login/company-login/company-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/src/app/authentication/login/company-login/company-login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/ShoppingControllers/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ShoppingControllers/AppController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exception/AjaxException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exception/AjaxException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Listener/AppListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Listener/AppListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/Authenticator/FormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/Authenticator/FormAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/CoreService.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/CoreService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="b4f508d5-384f-4362-aca4-b52544eb777e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +24,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -149,6 +136,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1OanniUFdFeiWumWmiBH3gVoC5t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -333,7 +321,7 @@
       <workItem from="1568218056563" duration="9837000" />
       <workItem from="1568309212892" duration="3104000" />
       <workItem from="1568383696087" duration="17045000" />
-      <workItem from="1568433503335" duration="4448000" />
+      <workItem from="1568433503335" duration="4457000" />
     </task>
     <servers />
   </component>
