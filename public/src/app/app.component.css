@@ -1,0 +1,8 @@
+p{
+    text-align: center;
+    font-size: 50px;
+}
+
+button {
+    z-index: 10000000;
+}

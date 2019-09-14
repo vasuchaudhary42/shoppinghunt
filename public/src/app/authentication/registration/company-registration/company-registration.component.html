@@ -1,0 +1,49 @@
+<h1>Company Registration</h1>
+
+<form [formGroup] = "companyForm" (ngSubmit)="onSubmit()" >
+
+    <div class="form-group">
+        <div class="form-control-message"><p>Name</p></div>
+        <div class="form-control"><input type="text" formControlName="name"></div>
+        <control-messages [control]="companyForm.controls.name"></control-messages>
+    </div>
+
+    <div class="form-group">
+        <div class="form-control-message"><p>Email</p></div>
+        <div class="form-control"><input type="email" formControlName="email"></div>
+        <control-messages [control]="companyForm.controls.email"></control-messages>
+    </div>
+
+    <div class="form-group">
+        <div class="form-control-message"><p>Company Name</p></div>
+        <div class="form-control"><input type="text" formControlName="companyName"></div>
+        <control-messages [control]="companyForm.controls.companyName"></control-messages>
+    </div>
+
+    <div class="form-group">
+        <div class="form-control-message"><p>Company Domain</p></div>
+        <div class="form-control"><input type="text" formControlName="domain"></div>
+        <control-messages [control]="companyForm.controls.domain"></control-messages>
+    </div>
+
+    <div class="form-group" formGroupName="password">
+        <div class="form-group">
+            <div class="form-control-message"><p>Password</p></div>
+            <div class="form-control"><input type="password" formControlName="first"></div>
+            <control-messages [control]="password.controls.first"></control-messages>
+        </div>
+
+        <div class="form-group">
+            <div class="formvasuchaudhary42@company.com-control-message"><p>Confirm Password</p></div>
+            <div class="form-control"><input type="password" formControlName="second"></div>
+            <control-messages [control]="password.controls.second"></control-messages>
+        </div>
+    </div>
+<!--    [disabled]="companyForm.invalid || password.invalid || password.controls.first.value != password.controls.second.value"-->
+    <div class="form-submit">
+        <button class="btn-submit" type="submit"  >Registration</button>
+    </div>
+    <div class="login-btn">
+        <button  type="button" (click)="gotoLogin()">Goto Login</button>
+    </div>
+</form>

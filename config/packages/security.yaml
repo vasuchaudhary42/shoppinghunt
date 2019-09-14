@@ -1,0 +1,78 @@
+security:
+    encoders:
+        #        AdminBundle\Entity\Admin:
+        #            algorithm: bcrypt
+        #            cost:      15
+        App\Entity\User:
+            algorithm: bcrypt
+            cost:      15
+        App\Entity\Customer:
+            algorithm: bcrypt
+            cost:      15
+
+    role_hierarchy:
+        ROLE_CUSTOMER: [ ROLE_CUSTOMER ]
+        ROLE_MEMBER:   [ ROLE_MEMBER, ROLE_CUSTOMER ]
+        ROLE_COMPANY:  [ ROLE_MEMBER, ROLE_COMPANY ]
+        ROLE_ADMIN:    [ ROLE_ADMIN,  ROLE_COMPANY ]
+
+    providers:
+        #        admin.provider:
+        #            id: admin.provider
+        admin.provider:
+            id: App\Provider\UserProvider
+        customer.provider:
+            id: App\Provider\CustomerProvider
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        api_area:
+            pattern: ^/api-v1
+            anonymous: true
+            provider: admin.provider
+            logout:
+                path: /api/admin/logout
+                target: /api/admin/logout
+                invalidate_session: true
+            guard:
+                authenticators:
+                    - App\Security\Authenticator\ApiAuthenticator
+
+        admin_area:
+            request_matcher: App\Security\RequestMatcher\AdminRequestMatcher
+            anonymous: true
+            provider: admin.provider
+            logout:
+                path: /api/admin/logout
+                target: /api/admin/logout
+                invalidate_session: true
+            guard:
+                authenticators:
+                    - App\Security\Authenticator\FormAuthenticator
+        customer_area:
+            request_matcher: App\Security\RequestMatcher\CustomerRequestMatcher
+            anonymous: true
+            provider: customer.provider
+            logout:
+                path: /api/customer/logout
+                target: /api/customer/logout
+                invalidate_session: true
+            guard:
+                authenticators:
+                    - App\Security\Authenticator\FormAuthenticator
+    access_control:
+        #        - { path: ^/admin/login, roles: [ ROLE_ADMIN, IS_AUTHENTICATED_ANONYMOUSLY ] }
+        #        - { path: ^/admin/logout, roles: [ ROLE_ADMIN ] }
+        #        - { path: ^/admin, roles: [ ROLE_ADMIN ] }
+        - { path: ^/api/admin/login, roles: [ IS_AUTHENTICATED_ANONYMOUSLY ]}
+        - { path: ^/api/admin/register, roles: [ IS_AUTHENTICATED_ANONYMOUSLY ]}
+        - { path: ^/api/admin/logout, roles: [ ROLE_COMPANY ] }
+        - { path: ^/api/admin/, roles: [ ROLE_COMPANY, IS_FULLY_AUTHENTICATED] }
+        - { path: ^/admin/, roles: [ ROLE_COMPANY ] }
+        - { path: ^/api-v1/admin/, roles: [ ROLE_COMPANY ] }
+        - { path: ^/login, roles: [ ROLE_CUSTOMER, IS_AUTHENTICATED_ANONYMOUSLY ] }
+        - { path: ^/logout, roles: [ ROLE_CUSTOMER ] }
+        - { path: ^/, roles: [ ROLE_CUSTOMER, IS_AUTHENTICATED_ANONYMOUSLY ]}
+

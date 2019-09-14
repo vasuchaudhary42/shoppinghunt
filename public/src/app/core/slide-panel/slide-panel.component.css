@@ -1,0 +1,78 @@
+.slide-panel-wrapper {
+    height: 100%;
+    background: white;
+}
+.company-name-box {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: 80px;
+    background-color: #8a7fc4;
+}
+
+.company-name {
+    font-size: 1.125rem;
+    color: white;
+    text-align: center;
+    margin-left: 30px;
+}
+
+.slide-panel-wrapper .side-bar-panel .side-bar-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+}
+.slide-panel-wrapper .side-bar-panel .side-bar-items li {
+    margin: 0;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.side-bar-items li label {
+    font-size: 15px;
+    font-weight: 500;
+    color: #464a53;
+}
+.side-bar-items li:hover {
+    background: #F3F1FA;
+}
+.side-bar-items li:hover span {
+    visibility: visible;
+}
+
+.side-bar-items li.tooltip {
+    position: relative;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 105%;
+    font-size: 12px;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+.selectedMenu {
+    background: #a99de7!important;
+}
+.selectedMenu label{
+    color: white!important;
+}
+

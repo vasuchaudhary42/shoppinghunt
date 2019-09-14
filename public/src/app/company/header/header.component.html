@@ -1,0 +1,10 @@
+<div class="header">
+    <div class="row col-12 nav">
+        <i class="pi pi-bars" style="font-size: 2em"></i>
+        <div class="search-bar">
+            <search [searchList]="searchList" (onSearchElementSelect)="onSearchElementSelect($event)" (onSearch)="onSearch($event)"></search>
+        </div>
+        <a [routerLink]="['../company/login']" class="btn nav-login">Login</a>
+        <a [routerLink]="['../company/registration']" class="btn nav-registration">Registration</a>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+
+api_routing:
+    prefix: /{_locale}/{route}/admin
+    name_prefix: api_
+    requirements:
+        _locale: "%app_locale%"
+        route: api|api-v1
+    defaults:
+        _locale: '%default_locale%'
+    resource: '../src/Resources/config/routing/api_routing.yaml'
+
+front_routing:
+    prefix: /{_locale}/{route}/customer
+    name_prefix: front_
+    requirements:
+        _locale: '%app_locale%'
+        route: api
+    defaults:
+        _locale: '%default_locale%'
+    resource: '../src/Resources/config/routing/front_routing.yaml'
+
+app_routing:
+    path: /
+    controller: App\Controller\ShoppingControllers\AppController::appAction
+app_locale_routing:
+    path: /{_locale}
+    controller: App\Controller\ShoppingControllers\AppController::appAction
+    requirements:
+        _locale: '%app_locale%'
+    defaults:
+        _locale: '%default_locale%'
+app_route_routing:
+    path: /{_locale}/{route}
+    controller: App\Controller\ShoppingControllers\AppController::appAction
+    requirements:
+        _locale: '%app_locale%'
+        route: .+
+    defaults:
+        _locale: '%default_locale%'

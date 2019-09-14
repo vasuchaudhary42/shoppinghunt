@@ -1,0 +1,42 @@
+.side-bar-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 200px;
+    height: 100%;
+}
+
+.small-side-bar-box {
+    width: 50px!important;
+}
+
+.large-side-bar-box {
+    width: 200px!important;
+}
+
+.content-box {
+    position: relative;
+    left: 200px;
+    top: 0;
+    width: calc(100% - 200px);
+    height: 100%;
+}
+.small-content-box {
+    left: 200px;
+    width: calc(100% - 200px) !important;
+}
+.large-content-box {
+    left: 50px;
+    width: calc(100% - 50px) !important;
+}
+
+@media screen and (max-width: 400px){
+    .side-bar-box {
+        width: 50px;
+    }
+    .content-box {
+        left: 50px;
+        width: calc(100% - 50px);
+    }
+}

@@ -1,0 +1,9 @@
+<div class="col-12 company-app-shell">
+    <div class="side-bar-box">
+        <slide-panel [slidePanelMenus]="slidePanelMenusList" [selectedMenu]="selectedMenu" ></slide-panel>
+    </div>
+    <div class="content-box">
+        <company-header></company-header>
+        <router-outlet></router-outlet>
+    </div>
+</div>

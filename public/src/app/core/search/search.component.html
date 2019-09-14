@@ -1,0 +1,8 @@
+<div class="search-wrapper">
+    <input #search placeholder="Search" type="text" (keyup.enter)="onSearch.emit(search.value)"/>
+    <div class="search-drop-down">
+       <ul *ngFor="let searchElement of searchList">
+          <li (click)="onSearchElementSelect.emit(searchElement)">{{ searchElement }}</li>
+       </ul>
+    </div>
+</div>

@@ -1,0 +1,66 @@
+App\Entity\User:
+  group_sequence:
+    - User
+    - Registration
+  properties:
+    name:
+      - NotBlank:
+          groups: [ Registration ]
+          message: BlankName
+      - Regex:
+          groups: [ Registration ]
+          pattern: '/^[a-zA-Z\s]+$/'
+          match: true
+          message: InvalidName
+    email:
+      - NotBlank:
+          groups: [ Registration, User ]
+          message: BlankEmail
+      - App\Validator\ValidEmail: { groups: [ Registration, User ] }
+      - App\Validator\UniqueEmail: { groups: [ Registration ] }
+    companyName:
+      - NotBlank:
+          groups: [ Registration ]
+          message: BlankCompanyName
+      - App\Validator\UniqueCompanyName: { groups: [ Registration ] }
+    domain:
+      - NotBlank:
+          groups: [ Registration ]
+          message: BlankDomain
+      - App\Validator\UniqueDomain: { groups: [ Registration ] }
+    password:
+      - NotBlank:
+          groups: [ Registration, User ]
+          message: BlankPassword
+      - Length:
+          groups: [ User, Registration ]
+          min: 8
+          max: 16
+          minMessage: ShortPassword
+          maxMessage: LongPasword
+
+App\Entity\Category:
+  group_sequence:
+    - Category
+  properties:
+    name:
+      - NotBlank:
+          groups: [ Category ]
+          message: Blank Name
+      - Length:
+          groups: [ Category ]
+          min: 1
+          max: 50
+          minMessage: ShortPassword
+          maxMessage: LongPasword
+    path:
+      - NotBlank:
+          groups: [ Category ]
+          message: Blank Path
+      - Length:
+          groups: [ Category ]
+          min: 1
+          max: 50
+          minMessage: ShortPassword
+          maxMessage: LongPasword
+      - App\Validator\UniqueCategoryPath: { groups: [ Category ] }

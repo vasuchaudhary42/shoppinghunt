@@ -1,0 +1,15 @@
+.search-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+}
+.search-wrapper input{
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    color: #495057;
+}
+
+.search-drop-down {
+
+}

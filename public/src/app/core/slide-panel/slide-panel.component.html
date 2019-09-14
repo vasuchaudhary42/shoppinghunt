@@ -1,0 +1,16 @@
+<div class="col-12 slide-panel-wrapper">
+    <div class="col-12 company-name-box">
+        <label class="company-name">{{ 'EagleHunt' }}</label>
+    </div>
+    <div class="col-12 side-bar-panel">
+        <ul class="col-12 side-bar-items">
+            <li *ngFor="let slidePanelMenu of slidePanelMenus;let i = index" [class.selectedMenu]="slidePanelMenu === selectedMenu" class="tooltip" (click)="selectedMenu = slidePanelMenu ;onMenuSelect.emit(slidePanelMenu)">
+                <div>
+                    <img [src]="slidePanelMenu.icon">
+                    <label>{{ slidePanelMenu.title }}</label>
+                </div>
+                <span class="tooltiptext">{{ slidePanelMenu.tooltip }}</span>
+            </li>
+        </ul>
+    </div>
+</div>

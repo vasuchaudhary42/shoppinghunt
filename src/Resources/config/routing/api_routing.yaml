@@ -1,0 +1,18 @@
+login:
+  path: /login
+  controller: App\Controller\ShoppingControllers\UserController::loginAction
+
+logout:
+  path: /logout
+  controller: App\Controller\ShoppingControllers\UserController::logoutAction
+
+registration:
+  path: /register
+  controller: App\Controller\ShoppingControllers\UserController::companyRegistrationAction
+
+account:
+  path: /account
+  controller: App\Controller\ShoppingControllers\UserController::account
+
+category_routing:
+  resource: '../src/Resources/config/routing/category_routing.yaml'

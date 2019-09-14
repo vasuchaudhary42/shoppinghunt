@@ -1,0 +1,47 @@
+
+create_category:
+  path: /category
+  controller: App\Controller\ShoppingControllers\CategoryController::createCategory
+  methods: post
+
+get_category:
+  path: /category/{path}
+  controller: App\Controller\ShoppingControllers\CategoryController::getCategory
+  methods: get
+
+update_category:
+  path: /category/{id}
+  controller: App\Controller\ShoppingControllers\CategoryController::updateCategory
+  methods: put
+
+delete_category:
+  path: /category/{id}
+  controller: App\Controller\ShoppingControllers\CategoryController::deleteCategory
+  methods: delete
+
+
+get_all_category:
+  path: /categories
+  controller: App\Controller\ShoppingControllers\CategoryController::getAllCategory
+  methods: get
+
+update_all_category:
+  path: /categories
+  controller: App\Controller\ShoppingControllers\CategoryController::updateAllCategory
+  methods: put
+
+delete_all_category:
+  path: /categories
+  controller: App\Controller\ShoppingControllers\CategoryController::deleteAllCategory
+  methods: delete
+
+
+update_categories:
+  path: /update/categories
+  controller: App\Controller\ShoppingControllers\CategoryController::updateCategories
+  methods: put
+
+delete_categories:
+  path: /delete/categories
+  controller: App\Controller\ShoppingControllers\CategoryController::deleteCategories
+  methods: delete
